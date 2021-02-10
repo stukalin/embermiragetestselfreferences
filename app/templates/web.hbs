@@ -1,0 +1,16 @@
+{{page-title "Web"}}
+hello from web <br>
+My id is {{this.model.id}}
+<br>
+I have following space views: <br>
+{{#each this.model.spaceviews as |spaceview|}}
+  <p>
+    view ID {{spaceview.id}}
+  </p>
+  which has following spaces
+  {{#each spaceview.spaces as |space|}}
+    <p>
+      ...space ID {{space.id}}
+    </p>
+  {{/each}}
+{{/each}}
