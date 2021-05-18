@@ -14,3 +14,14 @@ I have following space views: <br>
     </p>
   {{/each}}
 {{/each}}
+<br>
+And I have following spaces <br>
+{{#each this.model.spaces as |space|}}
+  <p>
+    space id {{space.id}}
+  </p>
+  which belongs to following space views
+  {{#each space.spaceviews as |spaceview|}}
+    <p>... spaceview id {{spaceview.id}}</p>
+  {{/each}}
+{{/each}}
